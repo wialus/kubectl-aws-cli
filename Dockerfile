@@ -1,7 +1,7 @@
 FROM ubuntu:jammy
 
 RUN apt update \
-    && apt install -y --no-install-recommends ca-certificates curl unzip \
+    && apt install -y --no-install-recommends ca-certificates curl unzip python3 \
     && curl -L https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl \
     && chmod +x /usr/local/bin/kubectl \
     && curl https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o /tmp/awscliv2.zip \
