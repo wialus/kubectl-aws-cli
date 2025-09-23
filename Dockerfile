@@ -1,4 +1,4 @@
-FROM ubuntu:noble
+FROM debian:trixie
 
 RUN apt update \
     && apt install -y --no-install-recommends ca-certificates curl unzip python3 \
