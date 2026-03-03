@@ -6,6 +6,7 @@ YEAR_AND_MONTH_AND_DAY = $(shell date '+%Y.%m.%d')
 
 .PHONY: build
 build:
+	docker pull debian:trixie
 	$(eval ID=$(shell docker build . -q))
 	docker tag $(ID) wialus/kubectl-aws-cli:$(YEAR)
 	docker tag $(ID) wialus/kubectl-aws-cli:$(YEAR_AND_MONTH)
